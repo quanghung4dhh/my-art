@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', 'Arial', 'sans-serif';
+}
+*::after, *::before {
+  box-sizing: inherit;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*  Top Nav  */
+.top_nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: #000;
+  min-width: 100%;
+}
+.top_nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top_nav a {
+  display: inline-block;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+.top_nav a:hover {
+  color: #000;
+  background: #ccc;
+}
+
+/*  Main content  */
+
+.main_content {
+  margin-top: 84px;
+}
+
+/*  My Art  */
+
+#myart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+#myart .column {
+  flex: 100%;
+}
+#myart img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  About  */
+
+#about {
+  background: rgb(241,241,241);
+}
+#about h1 {
+  text-align: center;
+  padding: 50px 0;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+#about .img {
+  padding: 0 50px;
+  text-align: center;
+}
+#about img {
+  max-width: 100%;
+  height: auto;
+}
+#about form {
+  margin-top: 30px;
+  padding: 0 80px;
+}
+#about p {
+  text-align: center;
+}
+#about .warn {
+  color: rgb(233,30,99);
+  font-size: 20px;
+  margin: 30px 0;
+}
+form label {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 15px 0;
+  font-weight: bold;
+}
+form input[type="text"] {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  padding: 15px;
+  font-size: 17px;
+}
+form input[type="text"]:focus {
+  border: 1px solid #000;
+}
+form input[type="button"] {
+  background: rgb(97,97,97);
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px
+}
+form input[type="button"]:hover {
+  color: #000;
+  background: #ccc;
+}
+
+/*  Footer  */
+
+.footer {
+  background: rgb(241,241,241);
+  padding: 50px 0;
+  text-align: center;
+}
+.footer a {
+  color: #000;
+}
+
+/*  For desktop  */
+
+@media screen and (min-width:768px) {
+  
+  /*  My Art  */
+  
+  #myart {
+    flex-direction: row;
+  }
+  #myart .column {
+    flex: 50%;
+  }
+  
+  /*  About  */
+  
+  #about {
+    padding: 0 100px;
+  }
+}
